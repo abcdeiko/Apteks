@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.dev.mobile.apteks.Models.Drug;
+import com.dev.mobile.apteks.data.drugs.models.Drug;
 import com.dev.mobile.apteks.R;
 
 

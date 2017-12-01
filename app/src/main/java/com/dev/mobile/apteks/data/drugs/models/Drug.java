@@ -1,11 +1,6 @@
-package com.dev.mobile.apteks.Models;
+package com.dev.mobile.apteks.data.drugs.models;
 
 import com.dev.mobile.apteks.Adapters.FindDrugsAdapter;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -121,8 +116,8 @@ public class Drug {
             connection.disconnect();
         }
 
-        Document doc = Jsoup.parse(sb.toString());
-        Elements mainElements = doc.select("ol[start] > li");
+//        Document doc = Jsoup.parse(sb.toString());
+//        Elements mainElements = doc.select("ol[start] > li");
 
         ArrayList<Drug> drugList;
 
@@ -132,43 +127,43 @@ public class Drug {
             drugList = adapter.getData();
         }
 
-        if (mainElements.size() > 0) {
-
-            for (int i = 0; i < mainElements.size(); i++) {
-
-                Drug drug = new Drug();
-
-                // TODO use constructor Drug ???
-
-                Elements elements;
-                Element element;
-
-                element = mainElements.get(i).select("h3").first();
-
-                if (element != null) {
-                    drug.setDrugName(element.text());
-                }
-
-                element = mainElements.get(i).select("span.price").first();
-
-                if (element != null) {
-                    drug.setDrugPrice(element.text());
-                }
-
-                elements = mainElements.get(i).select("a");
-
-                if (elements.size() > 2) {
-                    drug.setPharmacyName(elements.get(0).text());
-                    drug.setPharmacyHref(elements.get(0).attr("href"));
-                    drug.setPharmacyAddress(elements.get(1).text());
-                }
-
-
-                drugList.add(drug);
-            }
-        } else {  // need for no "loadMore" action
-            emptyAnswerFlag = true;
-        }
+//        if (mainElements.size() > 0) {
+//
+//            for (int i = 0; i < mainElements.size(); i++) {
+//
+//                Drug drug = new Drug();
+//
+//                // TODO use constructor Drug ???
+//
+//                Elements elements;
+//                Element element;
+//
+//                element = mainElements.get(i).select("h3").first();
+//
+//                if (element != null) {
+//                    drug.setDrugName(element.text());
+//                }
+//
+//                element = mainElements.get(i).select("span.price").first();
+//
+//                if (element != null) {
+//                    drug.setDrugPrice(element.text());
+//                }
+//
+//                elements = mainElements.get(i).select("a");
+//
+//                if (elements.size() > 2) {
+//                    drug.setPharmacyName(elements.get(0).text());
+//                    drug.setPharmacyHref(elements.get(0).attr("href"));
+//                    drug.setPharmacyAddress(elements.get(1).text());
+//                }
+//
+//
+//                drugList.add(drug);
+//            }
+//        } else {  // need for no "loadMore" action
+//            emptyAnswerFlag = true;
+//        }
 
         return drugList;
     }

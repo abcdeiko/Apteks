@@ -1,9 +1,5 @@
 package com.dev.mobile.apteks.Models;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -52,19 +48,19 @@ public class Pharmacy {
 
         connection.disconnect();
 
-        Document doc = Jsoup.parse(sb.toString());
-
-        Elements elements = doc.select("tr > td.value");
+//        Document doc = Jsoup.parse(sb.toString());
+//
+//        Elements elements = doc.select("tr > td.value");
 
         Pharmacy pharmacy = new Pharmacy();
-
-        if(elements.size() >= 5) {
-            pharmacy.setPharmacyCity(elements.get(0).text());
-            pharmacy.setPharmacyDistrict(elements.get(1).text());
-            pharmacy.setPharmacyAddress(elements.get(2).text());
-            pharmacy.setPharmacyPhone("+7(391)"+elements.get(3).text());
-            pharmacy.setPharmacyBuses(elements.get(4).text());
-        }
+//
+//        if(elements.size() >= 5) {
+//            pharmacy.setPharmacyCity(elements.get(0).text());
+//            pharmacy.setPharmacyDistrict(elements.get(1).text());
+//            pharmacy.setPharmacyAddress(elements.get(2).text());
+//            pharmacy.setPharmacyPhone("+7(391)"+elements.get(3).text());
+//            pharmacy.setPharmacyBuses(elements.get(4).text());
+//        }
 
         return pharmacy;
     }

@@ -3,8 +3,8 @@ package com.dev.mobile.apteks;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.dev.mobile.apteks.Tasks.LoadPharmacyInfoTask;
 
 
-public class AboutPharmacyActivity extends ActionBarActivity {
+public class AboutPharmacyActivity extends AppCompatActivity {
 
 
 

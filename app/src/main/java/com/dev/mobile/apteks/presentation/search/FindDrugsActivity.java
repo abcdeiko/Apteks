@@ -1,37 +1,33 @@
-package com.dev.mobile.apteks;
+package com.dev.mobile.apteks.presentation.search;
 
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.dev.mobile.apteks.AboutPharmacyActivity;
 import com.dev.mobile.apteks.Adapters.DrugAutoCompleteAdapter;
 import com.dev.mobile.apteks.Adapters.FindDrugsAdapter;
 import com.dev.mobile.apteks.Components.DelayedAutoCompleteTextView;
-import com.dev.mobile.apteks.Models.Drug;
+import com.dev.mobile.apteks.data.drugs.models.Drug;
+import com.dev.mobile.apteks.R;
 import com.dev.mobile.apteks.Tasks.FindDrugTask;
 import com.dev.mobile.apteks.Tasks.LoadPageDrugTask;
 
-import java.util.ArrayList;
 
-
-public class FindDrugsActivity extends ActionBarActivity {
+public class FindDrugsActivity extends AppCompatActivity {
     private final int MIN_CHAR_TO_SUGGEST = 3;
 
     private FindDrugsAdapter adapter;

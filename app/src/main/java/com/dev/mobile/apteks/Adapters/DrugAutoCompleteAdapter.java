@@ -9,8 +9,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
 
-import com.dev.mobile.apteks.Models.Drug;
-import com.dev.mobile.apteks.R;
+import com.dev.mobile.apteks.data.drugs.models.Drug;
 
 import java.util.ArrayList;
 

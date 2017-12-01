@@ -6,9 +6,8 @@ import android.view.View;
 import android.widget.Spinner;
 
 import com.dev.mobile.apteks.Adapters.FindDrugsAdapter;
-import com.dev.mobile.apteks.FindDrugsActivity;
-import com.dev.mobile.apteks.MainActivity;
-import com.dev.mobile.apteks.Models.Drug;
+import com.dev.mobile.apteks.presentation.search.FindDrugsActivity;
+import com.dev.mobile.apteks.data.drugs.models.Drug;
 import com.dev.mobile.apteks.R;
 
 import java.util.ArrayList;
